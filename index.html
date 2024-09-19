@@ -1,0 +1,111 @@
+ 
+<!doctype html>
+<html>
+    <head>
+        <!-- BOOTSTRAP CORE STYLE  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- GOOGLE FONT -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' crossorigin="anonymous" />
+
+        <!-- BOOTSTRAP JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+        <!-- CUSTOM STYLE CSS -->
+       
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!-- Page description -->   
+
+
+        <!-- Page keywords -->
+        
+
+        <!-- Page author -->
+        
+        <meta name="author" content="Hokuto Munakata" />
+        
+
+        <!-- Site title -->
+        
+        
+            <title>Demonstration of Language-based Audio Moment Retrieval - Hokuto Munakata</title>
+        
+        
+
+        
+            
+            
+        
+
+    </head>
+    <body>
+
+
+        <section class="jumbotron text-center">
+    <div class="container">
+        
+            <h1 class="jumbotron-heading">Demonstration of Language-based Audio Moment Retrieval</h1>
+        
+        
+            <p class="lead">
+                Hokuto Munakata, Taichi Nishimura, Shota Nakada, Tatsuya Komatsu
+            </p>
+            <p class="lead">
+                LY Corporation, Japan<br>
+
+            </p>
+            <p class="lead">
+                Submitting to ICASSP 2024<br>
+                [<a href="https://arxiv.org/abs/XXXX">Paper</a>] [<a href="https://github.com/XXXX">Code</a>]
+            </p>
+            
+
+
+        
+    </div>
+</section>
+        
+            <p><link rel="stylesheet" type="text/css" href="style.css"></p>
+<div class="container">
+    <div class="row"><h2>Abstract</h2></div>
+    
+    <div class="row">
+        <p class="lead">
+            In this paper, we propose and design a new task called audio moment retrieval (AMR).
+            Unlike conventional language-based audio retrieval tasks that search for short audio clips from an audio database, AMR aims to predict relevant moments in untrimmed long audio based on a text query.
+            Given the lack of prior work in AMR, we first build a dedicated dataset, Clotho-Moment, consisting of large-scale simulated audio recordings with moment annotations.
+            We then propose a DETR-based model, named Audio Moment DETR (AM-DETR), as a fundamental framework for AMR tasks.
+            This model captures temporal dependencies within audio features, inspired by similar video moment retrieval tasks, thus surpassing conventional clip-level audio retrieval methods.
+            Additionally, we provide manually annotated datasets to properly measure the effectiveness and robustness of our methods on real data.
+            Experimental results show that AM-DETR, trained with Clotho-Moment, outperforms a baseline model that applies a clip-level audio retrieval method with a sliding window on all metrics, particularly improving Recall1@0.7 by 9.00 points.
+        </p>
+    </div>
+    <div align="center">
+        <img src="images/task_overview.png" width="50%">
+        <figcaption>An overview of audio moment retrieval (AMR). Given a long audio
+            and text query, the system retrieves the relevant moments as the start and end
+            time stamps.</figcaption>
+    </div>
+    <div class="row"><h2>Demo</h2></div>
+    <div class="row">
+        <p class="lead">
+        
+        </p>
+    </div>
+</div>
+<p><br></p>
+
+<div class="container">
+    <h1>References</h1>
+    <div>
+        [1] K. Drossos, S. Lipping, and T. Virtanen, “Clotho: An audio captioning dataset,” in Proc. ICASSP, 2020, pp. 736–740.
+        <br>
+
+    </div>
+</div>
+        
+    </body>
+</html>
