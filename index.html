@@ -1,4 +1,3 @@
- 
 <!doctype html>
 <html>
     <head>
@@ -13,7 +12,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
         <!-- CUSTOM STYLE CSS -->
-       
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -30,48 +29,41 @@
 
         <!-- Site title -->
         
-        
-            <title>Language-based Audio Moment Retrieval - Hokuto Munakata</title>
-        
-        
-
-        
-            
-            
-        
-
+        <title>Language-based Audio Moment Retrieval - Hokuto Munakata</title>
     </head>
     <body>
 
 
-        <section class="jumbotron text-center">
-    <div class="container">
-        
-            <h1 class="jumbotron-heading">Language-based Audio Moment Retrieval</h1>
-        
-        
-            <p class="lead">
-                Hokuto Munakata, Taichi Nishimura, Shota Nakada, Tatsuya Komatsu
-            </p>
-            <p class="lead">
-                LY Corporation, Japan<br>
-
-            </p>
-            <p class="lead">
-                Under review<br>
-                [<a href="https://arxiv.org/abs/XXXX">Paper</a>] [<a href="https://github.com/XXXX">Code</a>]
-            </p>
+    <section class="jumbotron text-center">
+        <div class="container">
             
+                <h1 class="jumbotron-heading">Language-based Audio Moment Retrieval</h1>
+            
+            
+                <p class="lead">
+                    Hokuto Munakata, Taichi Nishimura, Shota Nakada, Tatsuya Komatsu
+                </p>
+                <p class="lead">
+                    LY Corporation, Japan<br>
+
+                </p>
+                <p class="lead">
+                    Under review<br>
+                    [<a href="https://arxiv.org/abs/(submitting)">Paper</a>]
+                    [<a href="https://github.com/line/lighthouse">Code (AMR)</a>] <br>
+                    [<a href="https://github.com/line/xxx">Code (Data preparation & Zero-shot SED, under construction)</a>]
+                </p>
+                
 
 
-        
-    </div>
-</section>
-        
-            <p><link rel="stylesheet" type="text/css" href="style.css"></p>
+            
+        </div>
+    </section>
+            
+    <p><link rel="stylesheet" type="text/css" href="style.css"></p>
+
 <div class="container">
     <div class="row"><h2>Abstract</h2></div>
-    
     <div class="row">
         <p class="lead">
             In this paper, we propose and design a new task called audio moment retrieval (AMR).
@@ -89,253 +81,261 @@
             and text query, the system retrieves the relevant moments as the start and end
             time stamps.</figcaption>
     </div>
-    <div class="row"><h2>Demo</h2></div>
+
+    <div class="row"><h2>Clotho-Moment</h2></div>
     <div class="row">
         <p class="lead">
-        This is an accompanying page and includes some examples of Clotho-Moment and UnAV-100 datasets and the moments predicted by AM-DETR.
-        Clotho-Moment is a simulated dataset made from Clotho [1] and Walking Tour [2].
-        Datasets and training scripts are available on <a href= "https://github.com/line/lighthouse" >Lighthouse</a> [3].
-        
+            Under construction.
         </p>
     </div>
+    <div align="center">
+        <img src="images/clotho-moment.png" width="30%">
+        <figcaption>Under construction.</figcaption>
+    </div>
+
+    <div class="row"><h2>Audio moment DETR (AM-DETR)</h2></div>
+    <div class="row">
+        <p class="lead">
+            Under construction.
+        </p>
+    </div>
+    <div align="center">
+        <img src="images/am-detr.png" width="30%">
+        <figcaption>Under construction.</figcaption>
+    </div>
+
 </div>
 
 <div class="container">
-<p><br></p>
-<div class="row"><h2>Clotho-Moment</h2></div>
+        <div class="row"><h2>Sample data & predicted moments</h2></div>
+        <div class="row"><h4>Clotho-Moment</h4></div>
+        <table   style="table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="text-align: center; width: 50%;">Audio sample</th>
+                    <th style="text-align: center; width: 30%;">Text Query</th>
+                    <th style="text-align: center; width: 10%;">Ground-truth<br>moment</th>
+                    <th style="text-align: center; width: 10%;">Predicted<br>moment</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            <tr>
+                <td >
+                    <audio id="audioSample1" controls preload="metadata" src="demo/Istanbul_0.0_60.0.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>A woman is making an announcement <br> about something</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample1', 10)">[11s, 33s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample1', 10)">[11s, 33s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample2" controls preload="metadata" src="demo/Istanbul_1.0_61.0.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>Bird are singing nearby a source of water <br> such as a small waterfall.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample2', 19)">[20s, 48s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample2', 18)">[19s, 47s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample3" controls preload="metadata" src="demo/Istanbul_4.0_64.0.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>The fast cars pass by as the rain falls.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample3', 0)">[0s, 9s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample3', 0)">[1s, 17s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample4" controls preload="metadata" src="demo/Istanbul_5.0_65.0.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>A plane accelerates and takes off <br> before fading in the distance.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample4', 32)">[33s, 54s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample4', 31)">[32s, 53s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample5" controls preload="metadata" src="demo/Istanbul_8.0_68.0.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>A burst of metal instruments playing is <br> followed by clapping, people talking and <br> more rhythmic sounds of horn music.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample5', 15)">[16s, 31s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample5', 13)">[14s, 31s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample6" controls preload="metadata" src="demo/Istanbul_8.0_68.0.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>A sink of water is being used to wash up in.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample6', 37)">[38s, 55s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample6', 36)">[37s, 53s]</button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <p><br></p>
+        <div class="row"><h4>UnAV-100 subset</h4></div>
+        </div>
+
+        <table   style="table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="text-align: center; width: 50%;">Audio sample</th>
+                    <th style="text-align: center; width: 30%;">Text Query</th>
+                    <th style="text-align: center; width: 10%;">Ground-truth<br>moment</th>
+                    <th style="text-align: center; width: 10%;">Predicted<br>moment</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            <tr>
+                <td >
+                    <audio id="audioSample7" controls preload="metadata" src="demo/TtO9wzZ3LFA.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>Someone dries his hair with a hair dryer.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample7', 18)">[19s, 34s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample7', 18)">[19s, 34s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample8" controls preload="metadata" src="demo/2PHV2xNjGVU.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>Two people perform tap dance to background music</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample8', 9)">[10s, 37s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample8', 13)">[14s, 34s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample9" controls preload="metadata" src="demo/1a-ODBWMUAE.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>Water cascades down from a waterfall.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample9', 4)">[5s, 26s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample9', 5)">[6s, 26s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample10" controls preload="metadata" src="demo/0T9__Qqp2Go.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>Spectators watch sports and cheer.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample10', 17)">[18s, 41s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample10', 13)">[14s, 36s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample11" controls preload="metadata" src="demo/-2FKhYSw_zU.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>Men and women sing in a chorus in a hall.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample11', 27)">[28s, 46s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample11', 27)">[28s, 41s]</button>
+                </td>
+            </tr>
+
+            <tr></tr>
+                <td >
+                    <audio id="audioSample12" controls preload="metadata" src="demo/sNicRCa4sTI.wav">
+                    </audio>
+                </td >
+                <td >
+                    <p>A sports car starts with a loud noise.</p>
+                </td >
+                <td >
+                    <button onclick="playAudio('audioSample12', 34)">[35s, 45s]</button>
+                </td>
+                <td >
+                    <button onclick="playAudio('audioSample12', 1)">[1s, 14s]</button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    <!-- </div> -->
 </div>
-
-<table   style="table-layout: fixed;">
-    <thead>
-        <tr>
-            <th style="text-align: center; width: 50%;">Audio sample</th>
-            <th style="text-align: center; width: 30%;">Text Query</th>
-            <th style="text-align: center; width: 10%;">Ground-truth<br>moment</th>
-            <th style="text-align: center; width: 10%;">Predicted<br>moment</th>
-        </tr>
-    </thead>
-    <tbody>
-
-
-    <tr>
-        <td >
-            <audio id="audioSample1" controls preload="metadata" src="demo/Istanbul_0.0_60.0.wav">
-            </audio>
-        </td >
-        <td >
-            <p>A woman is making an announcement <br> about something</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample1', 10)">[11s, 33s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample1', 10)">[11s, 33s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample2" controls preload="metadata" src="demo/Istanbul_1.0_61.0.wav">
-            </audio>
-        </td >
-        <td >
-            <p>Bird are singing nearby a source of water <br> such as a small waterfall.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample2', 19)">[20s, 48s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample2', 18)">[19s, 47s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample3" controls preload="metadata" src="demo/Istanbul_4.0_64.0.wav">
-            </audio>
-        </td >
-        <td >
-            <p>The fast cars pass by as the rain falls.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample3', 0)">[0s, 9s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample3', 0)">[1s, 17s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample4" controls preload="metadata" src="demo/Istanbul_5.0_65.0.wav">
-            </audio>
-        </td >
-        <td >
-            <p>A plane accelerates and takes off <br> before fading in the distance.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample4', 32)">[33s, 54s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample4', 31)">[32s, 53s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample5" controls preload="metadata" src="demo/Istanbul_8.0_68.0.wav">
-            </audio>
-        </td >
-        <td >
-            <p>A burst of metal instruments playing is <br> followed by clapping, people talking and <br> more rhythmic sounds of horn music.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample5', 15)">[16s, 31s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample5', 13)">[14s, 31s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample6" controls preload="metadata" src="demo/Istanbul_8.0_68.0.wav">
-            </audio>
-        </td >
-        <td >
-            <p>A sink of water is being used to wash up in.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample6', 37)">[38s, 55s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample6', 36)">[37s, 53s]</button>
-        </td>
-    </tr>
-
-    </tbody>
-</table>
-
-
-
-<div class="container">
-<p><br></p>
-<div class="row"><h2>UnAV-100</h2></div>
-</div>
-
-<table   style="table-layout: fixed;">
-    <thead>
-        <tr>
-            <th style="text-align: center; width: 50%;">Audio sample</th>
-            <th style="text-align: center; width: 30%;">Text Query</th>
-            <th style="text-align: center; width: 10%;">Ground-truth<br>moment</th>
-            <th style="text-align: center; width: 10%;">Predicted<br>moment</th>
-        </tr>
-    </thead>
-    <tbody>
-
-
-    <tr>
-        <td >
-            <audio id="audioSample7" controls preload="metadata" src="demo/TtO9wzZ3LFA.wav">
-            </audio>
-        </td >
-        <td >
-            <p>Someone dries his hair with a hair dryer.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample7', 18)">[19s, 34s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample7', 18)">[19s, 34s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample8" controls preload="metadata" src="demo/2PHV2xNjGVU.wav">
-            </audio>
-        </td >
-        <td >
-            <p>Two people perform tap dance to background music</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample8', 9)">[10s, 37s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample8', 13)">[14s, 34s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample9" controls preload="metadata" src="demo/1a-ODBWMUAE.wav">
-            </audio>
-        </td >
-        <td >
-            <p>Water cascades down from a waterfall.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample9', 4)">[5s, 26s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample9', 5)">[6s, 26s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample10" controls preload="metadata" src="demo/0T9__Qqp2Go.wav">
-            </audio>
-        </td >
-        <td >
-            <p>Spectators watch sports and cheer.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample10', 17)">[18s, 41s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample10', 13)">[14s, 36s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample11" controls preload="metadata" src="demo/-2FKhYSw_zU.wav">
-            </audio>
-        </td >
-        <td >
-            <p>Men and women sing in a chorus in a hall.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample11', 27)">[28s, 46s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample11', 27)">[28s, 41s]</button>
-        </td>
-    </tr>
-
-    <tr></tr>
-        <td >
-            <audio id="audioSample12" controls preload="metadata" src="demo/sNicRCa4sTI.wav">
-            </audio>
-        </td >
-        <td >
-            <p>A sports car starts with a loud noise.</p>
-        </td >
-        <td >
-            <button onclick="playAudio('audioSample12', 34)">[35s, 45s]</button>
-        </td>
-        <td >
-            <button onclick="playAudio('audioSample12', 1)">[1s, 14s]</button>
-        </td>
-    </tr>
-
-    </tbody>
-</table>
-
-
-
 
 <div class="container">
     <h1>References</h1>
