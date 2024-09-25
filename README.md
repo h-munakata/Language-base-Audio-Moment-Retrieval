@@ -1,3 +1,2 @@
 # Language-based Audio Moment Retrieval
-Under construction
-
+Demo page is located at https://h-munakata.github.io/Language-based-Audio-Moment-Retrieval/
